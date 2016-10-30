@@ -1,4 +1,4 @@
-package ifsp.conpat.domain;
+package ifsp.conpat.domain.entities;
 
 import java.util.List;
 

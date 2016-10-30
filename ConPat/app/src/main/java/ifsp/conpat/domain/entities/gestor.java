@@ -1,4 +1,4 @@
-package ifsp.conpat.domain;
+package ifsp.conpat.domain.entities;
 
 /**
  * Created by Carlos Zucherato on 30/10/2016.
