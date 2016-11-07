@@ -1,5 +1,8 @@
 package ifsp.conpat.infrastructure.data.repository;
 
+import android.content.ContentValues;
+import android.database.Cursor;
+
 import java.util.List;
 
 import ifsp.conpat.domain.entities.departamento;
@@ -10,13 +13,18 @@ import ifsp.conpat.domain.interfaces.IdepartamentoRepository;
  */
 public class departamentoRepository implements IdepartamentoRepository {
     @Override
-    public void Add(departamento departamento) {
-
+    public boolean Add(departamento departamento) {
+        return false;
     }
 
     @Override
-    public void Remove(departamento departamento) {
+    public boolean Update(departamento departamento) {
+        return false;
+    }
 
+    @Override
+    public boolean Remove(departamento departamento) {
+        return false;
     }
 
     @Override
@@ -26,6 +34,16 @@ public class departamentoRepository implements IdepartamentoRepository {
 
     @Override
     public List<departamento> All() {
+        return null;
+    }
+
+    @Override
+    public ContentValues serializeContentValues(departamento departamento) {
+        return null;
+    }
+
+    @Override
+    public departamento serializeByCursor(Cursor cursor, departamento departamento) {
         return null;
     }
 }

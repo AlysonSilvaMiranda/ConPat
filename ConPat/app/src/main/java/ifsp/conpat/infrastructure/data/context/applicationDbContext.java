@@ -15,13 +15,19 @@ public class applicationDbContext extends SQLiteOpenHelper {
     public applicationDbContext(Context context)
     {
         super(context, _databaseName, null, _versionSchema);
+        //context.deleteDatabase(_databaseName);
     }
 
     @Override
     public void onCreate(SQLiteDatabase database)
     {
-        database.execSQL("CREATE TABLE produtos (produtoId INTEGER PRIMARY KEY AUTOINCREMENT, "
-        + "nome TEXT, descricao TEXT, ean TEXT, marca TEXT, modelo TEXT, status TEXT, ncm TEXT);");
+        database.execSQL(
+                "CREATE TABLE produtos (produtoId INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "nome VARCHAR, descricao VARCHAR, ean VARCHAR, marca VARCHAR, modelo VARCHAR, " +
+                "status VARCHAR, ncm VARCHAR,  serie VARCHAR, valor DOUBLE, foto BLOB, " +
+                "dataCadastro DATETIME, dataAquisicao DATETIME);");
+
+        //database.execSQL("DROP TABLE IF EXISTS produtos");
     }
 
     @Override
