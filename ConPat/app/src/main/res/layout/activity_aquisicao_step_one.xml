@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Nome:"
-        android:id="@+id/textView2"
+        android:id="@+id/lbl_nome"
         android:layout_marginTop="44dp"
         android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
@@ -32,48 +32,48 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:layout_below="@+id/textView2"
+        android:id="@+id/txt_nome"
+        android:layout_below="@+id/lbl_nome"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Descrição:"
+        android:id="@+id/lbl_descricao"
+        android:layout_below="@+id/txt_nome"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_descricao"
+        android:layout_below="@+id/lbl_descricao"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/txt_nome"
+        android:layout_alignEnd="@+id/txt_nome" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Marca:"
-        android:id="@+id/textView3"
-        android:layout_below="@+id/editText"
+        android:id="@+id/lbl_marca"
+        android:layout_below="@+id/txt_descricao"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/editText"
-        android:layout_alignEnd="@+id/editText" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Modelo:"
-        android:id="@+id/textView4"
-        android:layout_below="@+id/editText2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText3"
-        android:layout_below="@+id/textView4"
+        android:id="@+id/txt_marca"
+        android:layout_below="@+id/lbl_marca"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
@@ -83,17 +83,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Número de Série:"
-        android:id="@+id/textView5"
-        android:layout_below="@+id/editText3"
+        android:text="Modelo:"
+        android:id="@+id/lbl_modelo"
+        android:layout_below="@+id/txt_marca"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText4"
-        android:layout_below="@+id/textView5"
+        android:id="@+id/txt_modelo"
+        android:layout_below="@+id/lbl_modelo"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
@@ -105,6 +105,25 @@
         android:text="Avançar"
         android:id="@+id/buttonAvancar"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="44dp" />
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Número de Série"
+        android:id="@+id/lbl_serie"
+        android:layout_below="@+id/txt_modelo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_serie"
+        android:layout_below="@+id/lbl_serie"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/txt_modelo"
+        android:layout_alignEnd="@+id/txt_modelo" />
 </RelativeLayout>

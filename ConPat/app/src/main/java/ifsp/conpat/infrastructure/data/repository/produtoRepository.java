@@ -53,8 +53,8 @@ public class produtoRepository extends applicationDbContext implements IprodutoR
         //Cursor cursor = getReadableDatabase().rawQuery("SELECT * FROM produtos WHERE produtoId = " + id, null);
         Cursor cursor = getReadableDatabase().query(
                 "produtos", new String[]{"produtoId", "nome","descricao",
-                "ean", "marca", "modelo", "status", "ncm", "dataAquisicao",
-                "dataCadastro", "foto", "serie", "valor"}, "produtoId=?", new String[]{String.valueOf(id)}, null, null, null);
+                "ean", "marca", "modelo", "status", "ncm", "serie", "valor", "foto", "dataAquisicao",
+                "dataCadastro", "taxaDepreciacao"}, "produtoId=?", new String[]{String.valueOf(id)}, null, null, null);
 
         produto produto = new produto();
 
@@ -102,11 +102,12 @@ public class produtoRepository extends applicationDbContext implements IprodutoR
         values.put("modelo", produto.getModelo());
         values.put("status", produto.getStatus());
         values.put("ncm", produto.getNcm());
-        values.put("dataCadastro", String.valueOf(produto.getDataCadastro()));
-        values.put("dataAquisicao", String.valueOf(produto.getDataAquisicao()));
         values.put("serie", produto.getSerie());
         values.put("valor", produto.getValor());
         values.put("foto", String.valueOf(produto.getFoto()));
+        values.put("dataCadastro", String.valueOf(produto.getDataCadastro()));
+        values.put("dataAquisicao", String.valueOf(produto.getDataAquisicao()));
+        values.put("taxaDepreciacao", String.valueOf(produto.getTaxaDepreciacao()));
 
         return values;
     }
@@ -127,6 +128,7 @@ public class produtoRepository extends applicationDbContext implements IprodutoR
         produto.setFoto(cursor.getBlob(10), context);
         produto.setDataCadastro(cursor.getString(11));
         produto.setDataAquisicao(cursor.getString(12));
+        produto.setTaxaDepreciacao(cursor.getDouble(13));
 
         return produto;
     }

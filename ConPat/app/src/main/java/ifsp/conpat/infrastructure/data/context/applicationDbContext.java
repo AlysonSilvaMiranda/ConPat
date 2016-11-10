@@ -22,10 +22,11 @@ public class applicationDbContext extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase database)
     {
         database.execSQL(
-                "CREATE TABLE produtos (produtoId INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "CREATE TABLE produtos (produtoId INTEGER AUTOINCREMENT, " +
                 "nome VARCHAR, descricao VARCHAR, ean VARCHAR, marca VARCHAR, modelo VARCHAR, " +
                 "status VARCHAR, ncm VARCHAR,  serie VARCHAR, valor DOUBLE, foto BLOB, " +
-                "dataCadastro DATETIME, dataAquisicao DATETIME);");
+                "dataCadastro DATETIME, dataAquisicao DATETIME, taxaDepreciacao DOUBLE" +
+                "CONSTRAINT PK_produto PRIMARY KEY (produtoId));");
 
         //database.execSQL("DROP TABLE IF EXISTS produtos");
     }

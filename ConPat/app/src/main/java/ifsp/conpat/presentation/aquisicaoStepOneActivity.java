@@ -6,8 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import ifsp.conpat.R;
+import ifsp.conpat.domain.entities.produto;
 
 public class aquisicaoStepOneActivity extends AppCompatActivity {
 
@@ -28,7 +30,14 @@ public class aquisicaoStepOneActivity extends AppCompatActivity {
 
     public void startActivityAquisicaoStepTwo(View v)
     {
+        produto produto = new produto();
+
+        produto.setNome("Notebook");
+
         Intent aquisicaoStepTwoActivity = new Intent(this, aquisicaoStepTwoActivity.class);
+
+        aquisicaoStepTwoActivity.putExtra("produto", produto);
+
         startActivity(aquisicaoStepTwoActivity);
     }
 

@@ -8,6 +8,7 @@ import android.nfc.Tag;
 import android.util.Log;
 import android.widget.ImageView;
 
+import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -16,7 +17,7 @@ import java.util.Date;
 /**
  * Created by Carlos Zucherato on 30/10/2016.
  */
-public class produto {
+public class produto implements Serializable {
 
     private int produtoId;
     private String nome;
@@ -31,6 +32,25 @@ public class produto {
     private String ncm;
     private double valor;
     private String serie;
+    private Double taxaDepreciacao;
+    private String latitude;
+    private String longitude;
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
+    }
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
+    }
 
     public String getSerie() {
         return serie;
@@ -160,5 +180,13 @@ public class produto {
 
     public void setProdutoId(int produtoId) {
         this.produtoId = produtoId;
+    }
+
+    public Double getTaxaDepreciacao() {
+        return taxaDepreciacao;
+    }
+
+    public void setTaxaDepreciacao(Double taxaDepreciacao) {
+        this.taxaDepreciacao = taxaDepreciacao;
     }
 }
