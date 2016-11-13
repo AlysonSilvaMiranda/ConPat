@@ -10,7 +10,7 @@ public class departamento {
     private String departamentoId;
     private String nome;
     private List<produto> produtos;
-    private gestor gestor;
+    private String nomeGestor;
 
     public String getDepartamentoId() {
         return departamentoId;
@@ -36,11 +36,11 @@ public class departamento {
         this.produtos = produtos;
     }
 
-    public gestor getGestor() {
-        return gestor;
+    public String getNomeGestor() {
+        return nomeGestor;
     }
 
-    public void setGestor(gestor gestor) {
-        this.gestor = gestor;
+    public void setNomeGestor(String nomeGestor) {
+        this.nomeGestor = nomeGestor;
     }
 }

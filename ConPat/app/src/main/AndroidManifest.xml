@@ -2,9 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ifsp.conpat">
 
-    <uses-permission android:name="android.permission.CAMERA"/>
-
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -28,7 +27,8 @@
         <activity android:name=".presentation.pesquisaActivity" />
         <activity android:name=".presentation.numeroSerieActivity" />
         <activity android:name=".presentation.resultadoBuscaActivity" />
-        <activity android:name=".presentation.cameraActivity"></activity>
+        <activity android:name=".presentation.aquisicaoStepThreeActivity" />
+        <activity android:name=".presentation.testeActivity"></activity>
     </application>
 
 </manifest>

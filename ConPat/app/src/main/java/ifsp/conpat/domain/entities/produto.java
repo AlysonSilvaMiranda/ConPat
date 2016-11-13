@@ -28,7 +28,8 @@ public class produto implements Serializable {
     private String status;
     private Date dataCadastro;
     private Date dataAquisicao;
-    private ImageView foto;
+    //private ImageView foto;
+    private Bitmap foto;
     private String ncm;
     private double valor;
     private String serie;
@@ -161,17 +162,27 @@ public class produto implements Serializable {
 
     }
 
-    public ImageView getFoto() {
+    //public ImageView getFoto() {
+    //    return foto;
+    //}
+
+    //public void setFoto(byte[] foto, Context context) {
+
+    //    Bitmap bmp = BitmapFactory.decodeByteArray(foto, 0, foto.length);
+    //    ImageView image = new ImageView(context);
+    //    image.setImageBitmap(bmp);
+
+    //    this.foto = image;
+    //}
+
+    private Bitmap getFoto()
+    {
         return foto;
     }
 
-    public void setFoto(byte[] foto, Context context) {
-
-        Bitmap bmp = BitmapFactory.decodeByteArray(foto, 0, foto.length);
-        ImageView image = new ImageView(context);
-        image.setImageBitmap(bmp);
-
-        this.foto = image;
+    private void setFoto(Bitmap foto)
+    {
+        this.foto = foto;
     }
 
     public int getProdutoId() {
