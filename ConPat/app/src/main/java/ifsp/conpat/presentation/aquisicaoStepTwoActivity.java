@@ -109,11 +109,9 @@ public class aquisicaoStepTwoActivity extends Activity {
 
         if(!txtTaxaDepreciacao.getText().toString().equals(""))
         {
-
+            String taxaDepreciacao = txtTaxaDepreciacao.getText().toString();
+            produto.setTaxaDepreciacao(Double.parseDouble(taxaDepreciacao));
         }
-
-        Double taxaDepreciacao = Double.parseDouble(txtTaxaDepreciacao.getText().toString());
-        produto.setTaxaDepreciacao(taxaDepreciacao);
 
         Intent aquisicaoStepThreeActivity = new Intent(this, testeActivity.class);
 
