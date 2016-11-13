@@ -104,10 +104,12 @@ public class produtoRepository extends applicationDbContext implements IprodutoR
         values.put("ncm", produto.getNcm());
         values.put("serie", produto.getSerie());
         values.put("valor", produto.getValor());
-        //values.put("foto", String.valueOf(produto.getFoto()));
-        values.put("dataCadastro", String.valueOf(produto.getDataCadastro()));
+        values.put("foto", String.valueOf(produto.getFoto()));
+        //values.put("dataCadastro", String.valueOf(produto.getDataCadastro()));
         values.put("dataAquisicao", String.valueOf(produto.getDataAquisicao()));
         values.put("taxaDepreciacao", String.valueOf(produto.getTaxaDepreciacao()));
+        values.put("latitude", produto.getLatitude());
+        values.put("longitude", produto.getLongitude());
 
         return values;
     }
@@ -125,10 +127,12 @@ public class produtoRepository extends applicationDbContext implements IprodutoR
         produto.setNcm(cursor.getString(7));
         produto.setSerie(cursor.getString(8));
         produto.setValor(cursor.getDouble(9));
-        //produto.setFoto(cursor.getBlob(10), context);
-        produto.setDataCadastro(cursor.getString(11));
+        produto.setFoto(cursor.getBlob(10));
+        //produto.setDataCadastro(cursor.getString(11));
         produto.setDataAquisicao(cursor.getString(12));
         produto.setTaxaDepreciacao(cursor.getDouble(13));
+        produto.setLatitude((cursor.getString(14)));
+        produto.setLongitude(cursor.getString(15));
 
         return produto;
     }

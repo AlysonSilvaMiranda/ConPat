@@ -16,13 +16,22 @@
         android:id="@+id/imagePreview" />
 
     <Button
+        android:text="Finalizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:id="@+id/buttonSalvar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tirar Foto"
         android:id="@+id/buttonCamera"
-        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="27dp"
+        android:layout_above="@+id/buttonSalvar"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="53dp" />
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

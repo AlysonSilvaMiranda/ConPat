@@ -26,16 +26,16 @@ public class produto implements Serializable {
     private String marca;
     private String modelo;
     private String status;
+    private String ncm;
+    private String serie;
+    private double valor;
+    private byte[] foto;
     private Date dataCadastro;
     private Date dataAquisicao;
-    //private ImageView foto;
-    private Bitmap foto;
-    private String ncm;
-    private double valor;
-    private String serie;
     private Double taxaDepreciacao;
     private String latitude;
     private String longitude;
+    //private ImageView foto;
 
     public String getLongitude() {
         return longitude;
@@ -175,12 +175,12 @@ public class produto implements Serializable {
     //    this.foto = image;
     //}
 
-    private Bitmap getFoto()
+    public byte[] getFoto()
     {
         return foto;
     }
 
-    private void setFoto(Bitmap foto)
+    public void setFoto(byte[] foto)
     {
         this.foto = foto;
     }

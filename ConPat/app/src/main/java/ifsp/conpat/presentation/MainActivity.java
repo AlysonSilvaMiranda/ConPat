@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         produtoRepository pr = new produtoRepository(this);
         List<produto> p = new ArrayList<produto>();
 
-        //p = pr.All();
+        p = pr.All();
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);

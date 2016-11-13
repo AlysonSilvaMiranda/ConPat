@@ -44,7 +44,7 @@ public class aquisicaoStepOneActivity extends AppCompatActivity {
         produto.setDescricao(descricao);
 
         TextView txtMarca = (TextView) findViewById(R.id.txt_marca);
-        String marca = txtDescricao.getText().toString();
+        String marca = txtMarca.getText().toString();
         produto.setMarca(marca);
 
         TextView txtModelo = (TextView) findViewById(R.id.txt_modelo);
