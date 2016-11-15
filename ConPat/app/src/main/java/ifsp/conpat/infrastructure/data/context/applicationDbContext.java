@@ -26,8 +26,13 @@ public class applicationDbContext extends SQLiteOpenHelper {
                 "nome VARCHAR, descricao VARCHAR, ean VARCHAR, marca VARCHAR, modelo VARCHAR, " +
                 "status VARCHAR, ncm VARCHAR,  serie VARCHAR, valor DOUBLE, foto BLOB, " +
                 "dataCadastro DATETIME, dataAquisicao DATETIME, taxaDepreciacao DOUBLE, " +
-                "latitude VARCHAR, longitude VARCHAR)");
-                //"CONSTRAINT PK_produto PRIMARY KEY (produtoId));");
+                "latitude VARCHAR, longitude VARCHAR, " +
+                "CONSTRAINT PK_produto PRIMARY KEY (produtoId))");
+
+        database.execSQL(
+                "CREATE TABLE departamento (departamentoId INTEGER AUTO INCREMENT, " +
+                "nome VARCHAR, nomeGestor VARCHAR, " +
+                "CONSTRAINT PK_departamento PRIMARY KEY (departamentoId))");
 
         //database.execSQL("DROP TABLE IF EXISTS produtos");
     }
