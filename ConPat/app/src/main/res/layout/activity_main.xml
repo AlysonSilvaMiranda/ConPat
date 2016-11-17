@@ -12,16 +12,6 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton5"
-        android:background="@drawable/relatorio"
-        android:layout_marginBottom="124dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/imageButton4"
-        android:layout_alignStart="@+id/imageButton4" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/imageButton6"
         android:background="@drawable/cadastro"
         android:layout_alignTop="@+id/imageButton5"
@@ -34,9 +24,11 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Aquisição"
         android:id="@+id/lbl_aquisicao"
-        android:layout_below="@+id/imageButtonAquisicao"
         android:layout_alignLeft="@+id/imageButtonAquisicao"
-        android:layout_alignStart="@+id/imageButtonAquisicao" />
+        android:layout_alignStart="@+id/imageButtonAquisicao"
+        android:layout_below="@+id/imageButtonAquisicao"
+        android:layout_alignRight="@+id/imageButtonAquisicao"
+        android:layout_alignEnd="@+id/imageButtonAquisicao" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -52,31 +44,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Cadastro"
-        android:id="@+id/lbl_cadastro"
-        android:layout_below="@+id/imageButton6"
-        android:layout_alignLeft="@+id/imageButton6"
-        android:layout_alignStart="@+id/imageButton6" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Relatórios"
         android:id="@+id/lbl_ralatorio"
         android:layout_below="@+id/imageButton6"
         android:layout_alignLeft="@+id/imageButton5"
         android:layout_alignStart="@+id/imageButton5" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Cadastro"
+        android:id="@+id/lbl_cadastro"
+        android:layout_below="@+id/imageButton6"
+        android:layout_alignLeft="@+id/imageButton6"
+        android:layout_alignStart="@+id/imageButton6"
+        android:layout_alignRight="@+id/imageButton6"
+        android:layout_alignEnd="@+id/imageButton6" />
+
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton4"
-        android:layout_marginTop="44dp"
-        android:background="@drawable/pesquisa"
-        android:layout_marginRight="44dp"
-        android:layout_marginEnd="44dp"
-        android:layout_alignParentTop="true"
+        android:id="@+id/imageButton5"
+        android:background="@drawable/relatorio"
+        android:layout_marginBottom="117dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
@@ -85,10 +77,18 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageButtonAquisicao"
         android:background="@drawable/cadastroaquisicao"
-        android:layout_marginLeft="50dp"
-        android:layout_marginStart="50dp"
-        android:layout_alignTop="@+id/imageButton4"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="87dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton4"
+        android:background="@drawable/pesquisa"
+        android:layout_alignTop="@+id/imageButtonAquisicao"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
